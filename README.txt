@@ -7,3 +7,5 @@ npm init -y
 npm i babel-cli babel-preset-es2015 --save
 3. adım nodemon kuruldu.
 npm install nodemon --save
+4. adım GraphQL Yoga kuruldu. Adresi=> https://github.com/prisma-labs/graphql-yoga
+npm i graphql-yoga --save 
