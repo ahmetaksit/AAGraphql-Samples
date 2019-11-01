@@ -20,3 +20,17 @@ cıktısı:
     [nodemon] starting `babel-node app.js --presets es2015`
     selam
     [nodemon] clean exit - waiting for changes before restart
+
+GraphQLServer başlatıldı. ilk test kodu çalıştırıldı.
+cıktısı:
+    AA: nodemon başlatıldı.
+    Server is running on localhost:4000
+Browser(localhost:4000) dan ilk graphql query çalıştırıldı.
+girdi:
+     query{hello}
+cıktısı:
+     {
+      "data": {
+        "hello": "Hello World"
+      }
+    }
