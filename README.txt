@@ -34,3 +34,17 @@ cıktısı:
         "hello": "Hello World"
       }
     }
+
+Yeni bir hello1 Query
+girdi:
+    query {
+      hello(name: "Ahmet")
+      hello1
+    }
+cıktısı:
+    {
+      "data": {
+        "hello": "Hello Ahmet",
+        "hello1": "sabit bir metin olarak selam"
+      }
+    }

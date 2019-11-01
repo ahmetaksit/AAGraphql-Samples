@@ -7,12 +7,14 @@ import { GraphQLServer } from 'graphql-yoga'
 const typeDefs = `
   type Query {
     hello(name: String): String!
+    hello1: String
   }
 `
 
 const resolvers = {
   Query: {
     hello: (_, { name }) => `Hello ${name || 'World'}`,
+    hello1: () => 'sabit bir metin olarak selam',
   },
 }
 
