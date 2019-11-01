@@ -178,3 +178,41 @@ cıktısı:
         }
       }
     }
+
+Users dizini içerisinde hangi postları yaptığını bulma,
+İç içe Query örneğine devam ediliyor. bu sefer içerdeki query de bir dizin şeklinde dönüyor.
+girdi:
+    query {
+      user(id: 1) {
+        id
+        username
+        city
+        posts {
+          id
+          title
+          userId
+        }
+      }
+    }
+cıktısı:
+    {
+      "data": {
+        "user": {
+          "id": "1",
+          "username": "ahmet",
+          "city": "İzmir",
+          "posts": [
+            {
+              "id": "1",
+              "title": "Acıyı seven, arayan ve ona sahip olmak isteyen hiç kimse yoktur. Nedeni basit. Çünkü o acıdır...",
+              "userId": "1"
+            },
+            {
+              "id": "4",
+              "title": "Etiam consequat, risus a aliquet ultricies, tellus urna fermentum orci, consectetur posuere nulla arcu vitae augue. Cras quam ipsum, tincidunt non tellus vel, auctor sodales neque. Phasellus sit amet justo at justo iaculis molestie. Proin mollis non justo non congue. Phasellus semper velit ut orci volutpat, sodales vehicula turpis porttitor. Quisque dictum nulla nisi, at ultrices ipsum ornare a. Aenean consectetur gravida dolor ut blandit. Donec porttitor orci nisi, sed commodo nisi vehicula ut.",
+              "userId": "1"
+            }
+          ]
+        }
+      }
+    }

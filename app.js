@@ -35,6 +35,10 @@ const Posts = [
 		id: 3,
 		title: "Praesent a nulla risus. Duis eget nisl nunc. Quisque laoreet lacus nec sem feugiat placerat. Nulla facilisis vestibulum velit, nec ornare dolor volutpat id. Duis vel mollis nulla. Sed erat sapien, blandit vel efficitur at, tincidunt ut mi. Nam dignissim nec eros et facilisis. Cras tincidunt non justo sed pellentesque. Curabitur nunc ipsum, auctor sit amet est ac, venenatis vestibulum sapien. Aliquam efficitur, nulla et ornare luctus, erat est vehicula neque, sed aliquam justo ligula a leo.",
 		userId: 2
+  },{
+		id: 4,
+		title: "Etiam consequat, risus a aliquet ultricies, tellus urna fermentum orci, consectetur posuere nulla arcu vitae augue. Cras quam ipsum, tincidunt non tellus vel, auctor sodales neque. Phasellus sit amet justo at justo iaculis molestie. Proin mollis non justo non congue. Phasellus semper velit ut orci volutpat, sodales vehicula turpis porttitor. Quisque dictum nulla nisi, at ultrices ipsum ornare a. Aenean consectetur gravida dolor ut blandit. Donec porttitor orci nisi, sed commodo nisi vehicula ut.",
+		userId: 1
 	}
 ];
 
@@ -55,6 +59,7 @@ const typeDefs = `
     id: ID!
     username: String!
     city: String
+    posts: [Post!]!
   }
 
   type Post {
@@ -78,6 +83,9 @@ const resolvers = {
   },
   Post: {
     user: (parent,args) => Users.find(user => user.id === parent.userId),
+  },
+  User: {
+    posts:(parent,args) => Posts.filter(post => post.userId === parent.id),
   },
 }
 
