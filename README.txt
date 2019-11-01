@@ -48,3 +48,25 @@ cıktısı:
         "hello1": "sabit bir metin olarak selam"
       }
     }
+
+Yeni bir user typeDefs oluşturuldu.
+girdi:
+    query {
+      hello1
+      hello
+      user {
+        id
+        username
+      }
+    }
+cıktısı:
+    {
+      "data": {
+        "hello1": "sabit bir metin olarak selam",
+        "hello": "Hello World",
+        "user": {
+          "id": "1",
+          "username": "ahmet"
+        }
+      }
+    }
