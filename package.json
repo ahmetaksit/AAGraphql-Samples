@@ -4,6 +4,7 @@
   "description": "GraphQL Yoga ile GraphQL Dersleri",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon app.js --exec babel-node --presets es2015",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
