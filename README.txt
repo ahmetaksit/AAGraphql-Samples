@@ -148,3 +148,33 @@ cıktısı:
         ]
       }
     }
+
+Posts dizini içerisinde hangi username yaptığını bulma, Query altın query çalıştıma.
+girdi:
+    query {
+      post(id: 2){
+        id
+        title
+        userId
+        user {
+          id
+          username
+          city
+        }
+      }
+    }
+cıktısı:
+    {
+      "data": {
+        "post": {
+          "id": "2",
+          "title": "Ut volutpat, sapien nec pretium convallis, lectus est egestas turpis, sed pretium nibh purus id sem. Maecenas efficitur sit amet lorem id ultricies. Duis urna risus, dapibus at condimentum ac, dictum non ligula. Nunc scelerisque elit elit, sed tempor mi vulputate non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras suscipit ligula et dui accumsan iaculis consectetur a enim. Proin urna tellus, mollis quis nibh non, vulputate condimentum nisi. Cras suscipit sed orci pulvinar venenatis. Nullam venenatis erat risus, id molestie augue fermentum lacinia.",
+          "userId": "3",
+          "user": {
+            "id": "3",
+            "username": "birol",
+            "city": "Urla"
+          }
+        }
+      }
+    }

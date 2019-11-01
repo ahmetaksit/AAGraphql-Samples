@@ -61,6 +61,7 @@ const typeDefs = `
     id: ID!
     title: String!
     userId: ID!
+    user: User!
   }
 `
 // GraphQL resolvers kodları
@@ -74,6 +75,9 @@ const resolvers = {
 
     post: (parent, args) => Posts.find(post => String(post.id) === args.id),
     posts:(parent, args) => Posts,
+  },
+  Post: {
+    user: (parent,args) => Users.find(user => user.id === parent.userId),
   },
 }
 
