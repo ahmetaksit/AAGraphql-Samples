@@ -1,0 +1,12 @@
+{
+  "name": "AAgraphql",
+  "version": "1.0.0",
+  "description": "GraphQL Yoga ile GraphQL Dersleri",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
