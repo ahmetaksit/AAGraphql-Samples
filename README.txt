@@ -5,3 +5,5 @@ Node.JS GraphQL Server Kurulumu
 npm init -y
 2. adım babel kuruldu.
 npm i babel-cli babel-preset-es2015 --save
+3. adım nodemon kuruldu.
+npm install nodemon --save
