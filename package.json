@@ -1,0 +1,19 @@
+{
+  "name": "AAgraphql",
+  "version": "1.0.0",
+  "description": "GraphQL Yoga ile GraphQL Dersleri",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js --exec babel-node --presets es2015",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "graphql-yoga": "^1.18.3",
+    "nodemon": "^1.19.4"
+  }
+}
